@@ -57,29 +57,7 @@ async def info(ctx):
     embed.add_field(name="このボットの鯖加入数", value=f"{len(bot.guilds)}")
     await ctx.send(embed=embed)
 
-@bot.command(aliases=['8ball','eightball','8ボール'])
-async def _8ball(ctx, *, question):
-    responses = ["As I see it, yes.",
-                "Ask again later.",
-                "Better not tell you now.",
-                "Cannot predict now.",
-                "Concentrate and ask again.",
-                "Don’t count on it.",
-                "It is certain.",
-                "It is decidedly so.",
-                "Most likely.",
-                "My reply is no.",
-                "My sources say no.",
-                "Outlook not so good.",
-                "Outlook good.",
-                "Reply hazy, try again.",
-                "Signs point to yes.",
-                "Very doubtful.",
-                "Without a doubt.",
-                "Yes.",
-                "Yes – definitely.",
-                "You may rely on it."]
-    await ctx.send(f'質問: {question};\n答え: {random.choice(responses)}')
+
 
 @bot.command()
 async def ping(ctx):
